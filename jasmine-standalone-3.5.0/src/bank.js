@@ -1,22 +1,20 @@
-function Player() {
+function Bank() {
+  this.balance = 0 
+  this.credit = 0
+  this.debit = 0
 }
-Player.prototype.play = function(song) {
-  this.currentlyPlayingSong = song;
-  this.isPlaying = true;
-};
 
-Player.prototype.pause = function() {
-  this.isPlaying = false;
-};
+Bank.prototype.add = function(value) {
+  this.balance += value
+  this.credit += value 
+}
 
-Player.prototype.resume = function() {
-  if (this.isPlaying) {
-    throw new Error("song is already playing");
-  }
+Bank.prototype.withdraw = function(value) {
+  this.balance -= value
+  this.debit += value  
+}
 
-  this.isPlaying = true;
-};
-
-Player.prototype.makeFavorite = function() {
-  this.currentlyPlayingSong.persistFavoriteStatus(true);
-};
+Bank.prototype.show = function() {
+  return
+   return this.balance + '||' + this.credit + '||' + this.debit 
+}
