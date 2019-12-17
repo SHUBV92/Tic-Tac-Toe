@@ -5,6 +5,8 @@ describe("Bank", function() {
     bank = new Bank();
   });
 
+describe("Allow Account Facilities", function(){
+
   it("Should show the balance of the user", function() {
     // bank.add(100);
     expect(bank.balance).toEqual(0);
@@ -21,82 +23,66 @@ describe("Bank", function() {
     expect(bank.balance).toEqual(90);
   });
 
-  describe("Show the Format", function(){
-
-    it("The Terminal should show the following format", function() {
-  
-    expect (bank.show).toEqual("date || credit || debit || balance");
-
-    });
-
+  it("Should show the transactions of the day", function() {
+    expect(bank.date()).toEqual(new Date())
   });
 
+});
+  
+  describe("Show the Bank Statement", function(){
 
+    it("The Terminal should show the following format", function() {
+        bank.add(100)
+        expect(bank.show()).toEqual("100||100||0");
+    });
 
+   
+  });
+  it("Shows the number of transactions", function(){
+    bank.add(10)  
+    expect(bank.transactions).toEqual(1)
+  });
+  console.log(bank.balance)
 
-});   
+ 
+  //   describe("Raise Error if attempt has been made to withdraw if balance is 0 ", function(){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //   describe("when song has been paused", function() {
-  //     beforeEach(function() {
-  //       player.play(song);
-  //       player.pause();
+  //     it("Raises Error if you try to take out money & balance is 0", fucntion() {
+ 
+  //       expect(function() { bank.add() }).toThrow("Balance is 0, Cannot Withdraw")
   //     });
+       
+  // });
 
-  //     it("should indicate that the song is currently paused", function() {
-  //       expect(player.isPlaying).toBeFalsy();
+it("Shows a new transaction  on a new line ", function(){
+  
+  expect().toEqual()
+})
 
-  //       // demonstrates use of 'not' with a custom matcher
-  //       expect(player).not.toBePlaying(song);
-  //     });
 
-  //     it("should be possible to resume", function() {
-  //       player.resume();
-  //       expect(player.isPlaying).toBeTruthy();
-  //       expect(player.currentlyPlayingSong).toEqual(song);
-  //     });
-  //   });
+});
 
-  //   // demonstrates use of spies to intercept and test method calls
-  //   it("tells the current song if the user has made it a favorite", function() {
-  //     spyOn(song, 'persistFavoriteStatus');
 
-  //     player.play(song);
-  //     player.makeFavorite();
 
-  //     expect(song.persistFavoriteStatus).toHaveBeenCalledWith(true);
-  //   });
 
-  //   //demonstrates use of expected exceptions
-  //   describe("#resume", function() {
-  //     it("should throw an exception if song is already playing", function() {
-  //       player.play(song);
 
-  //       expect(function() {
-  //         player.resume();
-  //       }).toThrowError("song is already playing");
-  //     });
-  //   });
-  // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
