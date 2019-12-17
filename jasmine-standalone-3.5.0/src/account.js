@@ -1,10 +1,10 @@
-function Account(user, bank) {
-  this.balance = 0 
-  this.credit = 0
-  this.debit = 0
+function Account() {
+  this.balance      = 0 
+  this.credit       = 0
+  this.debit        = 0
   this.transactions = 0
-  this.dates = 0
-  this.transaction =[]
+  this.dates        = 0
+  this.transaction  = []
 }
 
 Account.prototype.add = function(value) {
@@ -19,10 +19,14 @@ Account.prototype.withdraw = function(value) {
 }
 
 Account.prototype.date = function() {
-    return new Date()
-  //  return  this.date += new Date()
-}
+    // return new Date()
+    var currentDate = new Date();
+    var date = currentDate.getDate();
+    var month = currentDate.getMonth(); 
+    var year = currentDate.getFullYear();
+    var dateString = date + "-" +(month + 1) + "-" + year;
+    return  this.dates += dateString
+
+  }
 
 
-// "date || credit || debit || balance\n"
-// '||' + this.credit + '||' + this.debit 

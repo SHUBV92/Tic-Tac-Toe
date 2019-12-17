@@ -29,10 +29,17 @@ describe("Allow Account Facilities", function(){
     expect(account.date()).toEqual(new Date())
   });
 
+  it("Shows the date for the transactions", function(){
+    account.date()
+    expect(account.dates).toEqual("017-12-2019")
+  })
+
   it("Shows the number of transactions", function(){
     account.add(10)  
     expect(account.transactions).toEqual(1)
   });
+
+  
 
 });  
 

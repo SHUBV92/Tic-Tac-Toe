@@ -20,9 +20,22 @@ describe("Display", function(){
 
     it("The Terminal should show the following format", function() {
         account.add(100)
-        expect(account.show()).toEqual("100||100||0");
+        expect(account.show()).toEqual("||0||100||100");
     });
+
+    it("Shows the transactions for each day", function() {
+      
+      expect(display.transactions()).toEqaul() 
+    })
+
+    it("Changes the date once taking in credit, debit & balance", function(){
+      
+      expect(display.date).toEqual(2)
+    })
    
   });
+
+descirbe("Displays the transaction for each day ")
+
 
 });
