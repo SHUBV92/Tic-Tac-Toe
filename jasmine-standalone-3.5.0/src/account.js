@@ -9,13 +9,13 @@ function Account() {
 
 Account.prototype.add = function(value) {
   this.balance += value
-  this.credit += value  
+  this.credit = value  
   this.transactions += 1
 }
 
 Account.prototype.withdraw = function(value) {
   this.balance -= value
-  this.debit += value  
+  this.debit = value  
 }
 
 Account.prototype.date = function() {
@@ -29,4 +29,5 @@ Account.prototype.date = function() {
 
   }
 
+  
 
