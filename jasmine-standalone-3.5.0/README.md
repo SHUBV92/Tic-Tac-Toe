@@ -2,16 +2,16 @@
 
 User Stories 
 As a user,
-I want to add money to my account,
-So that I can have money secure for later use.
+* I want to add money to my account,
+* So that I can have money secure for later use.
 
 As a user,
-I want to take out money from my account,
-So that I can have access and use money for personal reasons. 
+* I want to take out money from my account,
+* So that I can have access and use money for personal reasons. 
 
 As a user,
-I want to print out a balance statement,
-So that I can asses how much money I have in my account. 
+* I want to print out a balance statement,
+* So that I can asses how much money I have in my account. 
 
 
 # Requirements 
