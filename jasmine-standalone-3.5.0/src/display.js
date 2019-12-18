@@ -14,7 +14,7 @@ function Display () {
         var header = "date || credit || debit || balance\n"
         
         var list = this.transaction.forEach(element => {
-            return element;
+            console.log(element);
           });
         
         var result  =  header + list

@@ -34,3 +34,14 @@ As a user
 * 14/01/2012 || || 500.00 || 2500.00
 * 13/01/2012 || 2000.00 || || 3000.00
 * 10/01/2012 || 1000.00 || || 1000.00
+
+# How to use the program 
+
+* account = new Account( )
+* display = new Display( )
+* account.add( 100 )
+* account.withdraw( 10 )
+* account.date( )
+* display.show( ) 
+
+

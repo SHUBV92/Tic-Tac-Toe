@@ -1,6 +1,6 @@
 describe("Display", function(){
     var display
-    var bank 
+    var account
 
     beforeEach(function() {
         display = new Display()
@@ -32,8 +32,14 @@ describe("Display", function(){
               account.withdraw(10)
               display.show()
 
-              expect(display.transactions).toEqual()
-            })
+              expect(display.transaction).toEqual()
+            });
+
+            it("Shows the number of transactions", function(){
+              account.add(100)  
+              display.show()
+              expect(display.transaction.length).toEqual(1)
+            });
           
           });
 
