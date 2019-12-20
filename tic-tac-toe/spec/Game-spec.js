@@ -1,56 +1,36 @@
-describe("Game", function() {
-  var game;
+describe("Logic", function() {
+    var logic;
+  
+    beforeEach(function() {
+      logic = new Logic();
+      game = new Game();
 
-  beforeEach(function() {
-    game = new Game();
-  });
+    });
+  
+    describe("Vertical Logic", function(){
+  
+        it("it shows the logic", function() {
+            expect(game.logic(["X", "X", "X", " ", " ", " ", " ", " ", " "])).toEqual("You have won");
+        });
 
-    describe("Board", function(){
+        it("it shows the logic", function() {
+            expect(game.logic([" ", " ", " ", "X", "X", "X", " ", " ", " "])).toEqual("You have won");
+        });
 
-      it("it has an array", function() {
-        expect(game.array).toEqual([" ", " ", " ", " ", " ", " ", " ", " ", " "]);
-      });
-
-      it("Player X can add position", function() {
-        game.playerX(4)
-        expect(game.array).toEqual([" ", " ", " ", " ", "X", " ", " ", " ", " "]);
-      });
-     
-      it("Player O can add position", function() {
-        game.playerX(4)
-        game.playerO(5)
-        expect(game.array).toEqual([" ", " ", " ", " ", "X", "O", " ", " ", " "]);
-      });
+        it("it shows the logic", function() {
+            expect(game.logic([" ", " ", " ", " ", " ", " ", "X", "X", "X"])).toEqual("You have won");
+        });
     });
 
-      describe("Erros", function(){
-      
-        it("Throws an error if a space has already been taken", function(){
-          expect(function(){game.playerO()}).toThrow("The space is already taken")
-        });
+        describe("Horizontal Logic", function(){
 
-        it("Throws an error if a space has already been taken", function(){
-          expect(function(){game.playerX()}).toThrow("The space is already taken")
-        });
-      
-      });
+            it("it shows the logic", function() {
+            expect(game.logic(["X", " ", " ", "X", " ", " ", "X", " ", " "])).toEqual("You have won");
+            });
 
-      describe("Player Moves", function(){
-      
-        it("Shows the player X taking the turn", function(){
-          game.playerX()
-          expect(this.turn).toEqual("Player O's Turn")
+            it("it shows the logic", function() {
+                expect(game.logic([" ", " ", " ", "X", "X", "X", "", " ", " "])).toEqual("You have won");
+            });
         });
       
-        it("Shows the player O taking the turn", function(){
-          game.playerO()
-          expect(this.turn).toEqual("Player X's Turn")
-        });
-      
-      });
-
-      // describe("Player Moves", function(){
-      
-      // });
-  });
-     
+});

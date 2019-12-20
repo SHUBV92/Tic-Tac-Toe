@@ -1,21 +1,24 @@
-
-function Game() {
-  this.array = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-  this.turn = "player"
+function Logic() {
+    a = game.array
 }
 
-Game.prototype.playerX = function(pos) {
-  if(this.array[pos] != " ") throw ("The space is already taken");
-    this.array[pos] = 'X'
-    this.turn = "Player O's Turn"
-}
 
-Game.prototype.playerO = function(pos) {
-  if(this.array[pos] != " ") throw ("The space is already taken");
-    this.array[pos] = 'O'
-    this.turn = "Player X's Turn"
-}
+Logic.prototype.logic = function(a) {
+    
+    if (a === ["X", "X", "X", " ", " ", " ", " ", " ", " "] ) {
+        return "You have won"
+    };
+        // return "Player X Won"
 
-Game.prototype.show =function(){
-  return this.array
-}
+    // if (game.array === [" ", " ", " ", "X", "X", "X", " ", " ", " "] ) {
+    //     return "Player X Won"
+    // };
+    // // return "Player X Won"
+
+    // if (game.array === [" ", " ", " ", " ", " ", " ", "X", "X", "X"]) {
+    //     // return "You have won"
+    // };
+    //     // return "Player X Won"
+
+    return logic
+};
