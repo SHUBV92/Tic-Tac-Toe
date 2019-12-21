@@ -1,5 +1,5 @@
 describe("Game", function() {
-  var game;
+  let game;
 
   beforeEach(function() {
     game = new Game();
@@ -32,6 +32,11 @@ describe("Game", function() {
         it("Throws an error if a space has already been taken", function(){
           expect(function(){game.playerX()}).toThrow("The space is already taken")
         });
+
+        it("A player can claim a field if it is not already taken", function(){
+          game.playerO(2)
+          expect(game.playerX(3)).toEqual([" ", " ", "O", " ", " ", " ", " ", " ", " "])
+        })
       
       });
 
@@ -46,8 +51,18 @@ describe("Game", function() {
           game.playerO()
           expect(this.turn).toEqual("Player X's Turn")
         });
-      
+        
       });
+
+        describe("Player Choices", function(){
+          it("Player 1 Chooses Choice", function(){
+            expect(player.choice1).toEqual("X")
+          })  
+          it("Player 2 Chooses Choice", function(){
+            expect(player.choice2).toEqual("O")
+          })  
+
+        });
 
       // describe("Player Moves", function(){
       

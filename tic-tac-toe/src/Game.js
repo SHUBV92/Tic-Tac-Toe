@@ -1,14 +1,19 @@
-function Logic() {
-    a = game.array
+function Logic(game) {
+ this.game = game
 }
 
 
-Logic.prototype.logic = function(a) {
+Logic.prototype.logic = function() {
     
-    if (a === ["X", "X", "X", " ", " ", " ", " ", " ", " "] ) {
-        return "You have won"
+    if (game.array === ["X", "X", "X", " ", " ", " ", " ", " ", " "] ) {
+        
     };
-        // return "Player X Won"
+
+    if(2 === 2) {
+        return "You have won"
+    }
+
+    // return "Player X Won"
 
     // if (game.array === [" ", " ", " ", "X", "X", "X", " ", " ", " "] ) {
     //     return "Player X Won"
@@ -20,5 +25,7 @@ Logic.prototype.logic = function(a) {
     // };
     //     // return "Player X Won"
 
-    return logic
+    
 };
+
+
